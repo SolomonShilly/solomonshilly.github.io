@@ -85,7 +85,8 @@ a:hover {
 
 .ticker {
   display: flex;
-  gap: 100px; /* spacing between services */
+  gap: 100px;            /* spacing between services */
+  min-width: max-content; /* prevents wrapping */
   animation: scrollTicker 20s linear infinite;
 }
 
@@ -93,9 +94,10 @@ a:hover {
   flex-shrink: 0;
 }
 
+/* continuous scroll animation */
 @keyframes scrollTicker {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* scroll half the width (due to duplication) */
 }
 
 @keyframes fadeInUp {
@@ -132,4 +134,3 @@ h3:hover {
 .active + .details {
   display: block;
 }
-
