@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  overflow: hidden;
+  overflow: auto;
   font-family: Inter, Poppins, sans-serif;
   background: linear-gradient(90deg, #ffffff 0%, #d9eefe 40%, #c8c5ff 60%, #ffffff 100%);
 }
