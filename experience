@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Experience</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body?
+<div class="container">
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="education.html>Education</a> |
+    <a href="experience.html>Experience</a>
+ </p>
+
+<h1>Solomon Shilly</h1>
+<h2>Experience</h2>
+
+<h3>Solutions Engineer - Live Building Systems</h3>
+<p>Sept 2025 - Present</p>
+<ul>
+  <li>Worked cross-functionally to help in sales, development, account management, operations, and collections</li>
+</ul>
+
+<h3>Code Coach - theCoderSchool</h3>
+<p>Sept 2023 - May 2025</p>
+<ul>
+  <li>Instructed students on how to use Scratch and Python to create end to end projects</li>
+</ul>
+
+<h3>Data Science Intern - Savage Sisters Recovery Inc.</h3>
+<p>June 2024 - Oct 2024</p>
+<ul>
+  <li>Evaluated an addiction recovery program using machine learning techniques on Python</li>
+</ul>
+
+<h3>Data Research Analyst Intern - Cooledtured Collections</h3>
+<p>June 2024 - Oct 2024</p>
+<ul>
+  <li>Automated competitor analysis using web-scraping tools on Python & Analyzed company social media</li>
+</ul>
+
+<h3>Database Analyst Intern, Team Leader - EasyEventPlanning LLC.</h3>
+<p>Jan 2024 - April 2024</p>
+<ul>
+  <li>Managed team and projects to increase company's SEO standing through technical audits, keyword research, and web-scraping</li>
+</ul>
+
+<h3>Business Development Associate - MilkCrate LLC.</h3>
+<p>Jan 2024 - April 2024</p>
+<ul>
+  <li>Launched marketing campaigns on HubSpot and LinkedIn, created marketing assets for client apps on Canva, and learned SQL</li>
+</ul>
+
+<h3>On-Line Monitoring Co-op - Bureau of Laboratory Services, Philadelphia Water Department</h3>
+<p>Sept 2018 - Mar 2019</p>
+<ul>
+  <li>Logged data and fixed alarm monitoring at 40+ sample water sites to improve system accuracy and water quality</li>
+</ul>
+
+<h3>Engineering Intern - Industrial Waste Unit, Philadelphia Water Department</h3>
+<p>Sept 2017 - Mar 2018</p>
+<ul>
+  <li>Communicated with businesses to tour commercial facilities and collect documents for wastewater permit issuance</li>
+</ul>
