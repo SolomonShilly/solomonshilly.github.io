@@ -1,29 +1,47 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <mea charset="UTF-8" />
-    <title>Education</title>
-    <link rel="sylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <p>
-        <a href="index.html">Home</a> |
-        <a href="education.html>Education</a> |
-        <a href="experience.html>Experience</a>
-      </p>
-      <h1>Solomon Shilly</h1>
-      <h2>Education</h2>
-      <h3>Master of Science in Economics and Computer Science - Drexel University'24</h3>
-      <ul>
-        <li><strong>Computer Science: </strong>Object-Oriented Programming, Data Structures & Algorithms, Software Design Patterns, Systems Basics, Machine Learning, Artificial Intelligence, Agile Design Thinking</li>
-        <li><strong>Economics: </strong> Econometrics & Data Analysis, Time-Series Econometrics, Mathematical Economics, Microeconomics, Macroeconomics </li>
-        <li><strong>Tech Stack: </strong> Python, Java, C, EViews, STATA, Command Prompt, GNU Debugger</li>
-      </ul>
-      <h3>Bachelor of Science in Business Administration, Finance Major - Drexel University'22</h3>
-      <ul>
-        <li><strong>Finance: </strong>Investment Securities & Markets, Intermediate Corporate Finance, Financial Institutions & Markets, Money & Capital Markets, Global Financial Mgmt, Comparative Financial Analysis, Entrepreneurial Finance, Finance & Climate Change</li>
-        <li><strong>Business: </strong>Financial Accounting Foundations, Business Statistics, Managerial Accounting Foundations, Critical Reasoning, Microeconomics, Macroeconomics, International Business, Management Information Systems, Marketing Mgmt, Operations Mgmt, Strategy & Competitive Advantage, Business Communication, Calculus I & II, Social Entrepreneurship</li>
-        <li><strong>Tech Stack: </strong> FactSet, Excel</li>
-      </ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Education</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="education.html">Education</a> |
+    <a href="experience.html">Experience</a>
+  </p>
+
+  <h1>Solomon Shilly</h1>
+  <h2>Education</h2>
+
+  <h3 class="toggle">Master of Science in Economics and Computer Science - Drexel University '24</h3>
+  <div class="details">
+    <ul>
+      <li><strong>Computer Science:</strong> Object-Oriented Programming, Data Structures & Algorithms, Software Design Patterns, Systems Basics, Machine Learning, AI, Agile Design Thinking</li>
+      <li><strong>Economics:</strong> Econometrics & Data Analysis, Time-Series Econometrics, Mathematical Economics, Microeconomics, Macroeconomics</li>
+      <li><strong>Tech Stack:</strong> Python, Java, C, EViews, STATA, Command Prompt, GDB</li>
+    </ul>
+  </div>
+
+  <h3 class="toggle">Bachelor of Science in Business Administration, Finance Major - Drexel University '22</h3>
+  <div class="details">
+    <ul>
+      <li><strong>Finance:</strong> Investment Securities & Markets, Intermediate Corporate Finance, Financial Institutions & Markets, Money & Capital Markets, Global Financial Mgmt, Comparative Financial Analysis, Entrepreneurial Finance, Finance & Climate Change</li>
+      <li><strong>Business:</strong> Financial Accounting Foundations, Business Statistics, Managerial Accounting Foundations, Critical Reasoning, Microeconomics, Macroeconomics, International Business, Management Information Systems, Marketing Mgmt, Operations Mgmt, Strategy & Competitive Advantage, Business Communication, Calculus I & II, Social Entrepreneurship</li>
+      <li><strong>Tech Stack:</strong> FactSet, Excel</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const toggles = document.querySelectorAll('.toggle');
+  toggles.forEach(t => {
+    t.addEventListener('click', () => {
+      t.classList.toggle('active');
+    });
+  });
+</script>
+</body>
 </html>
