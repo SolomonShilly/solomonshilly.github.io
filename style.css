@@ -3,7 +3,6 @@ body {
   overflow-x: hidden;
   font-family: Inter, Poppins, sans-serif;
   background: linear-gradient(90deg, #ffffff 0%, #d9eefe 40%, #c8c5ff 60%, #ffffff 100%);
-  color: #0a0f24;
 }
 
 a {
@@ -17,14 +16,6 @@ a:hover {
   color: #6a0dad;
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  padding: 30px;
-}
-
 .hero {
   width: 100%;
   height: 100vh;
@@ -33,30 +24,49 @@ a:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .hero-content {
+  padding: 40px 70px;
   text-align: center;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
-  max-width: 700px;
-  margin-bottom: 60px;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  color: #0a0f24;
 }
 
 .hero-content h2 {
   font-size: 1.3rem;
   font-weight: 400;
+  color: #444;
   margin-bottom: 10px;
 }
 
 .email {
   font-size: 1.1rem;
+  margin-top: 10px;
+  color: #222;
 }
 
 .scroll-bar {
@@ -68,9 +78,9 @@ a:hover {
 }
 
 .ticker {
-  display: inline-flex;
+  display: flex;
   gap: 100px;
-  white-space: nowrap;
+  min-width: max-content;
   animation: scrollTicker 20s linear infinite;
 }
 
@@ -80,29 +90,27 @@ a:hover {
 
 @keyframes scrollTicker {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
 }
 
 @keyframes fadeInUp {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 40px;
-  font-size: 16px;
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-h3.toggle {
+h3 {
   cursor: pointer;
-  margin-top: 20px;
   color: #0a0f24;
+  margin-top: 25px;
   transition: 0.2s;
 }
 
-h3.toggle:hover {
+h3:hover {
   color: #6a0dad;
 }
 
@@ -116,6 +124,32 @@ h3.toggle:hover {
   display: block;
 }
 
+.project-list h3 {
+  cursor: pointer;
+  margin-top: 25px;
+  color: #0a0f24;
+  transition: 0.2s;
+}
+
+.project-list h3:hover {
+  color: #6a0dad;
+}
+
+.project-list .details {
+  display: none;
+  margin-left: 20px;
+  color: #333;
+}
+
+.project-list .active + .details {
+  display: block;
+}
+
 .project-list a {
+  color: #0a0f24;
   font-weight: 500;
+}
+
+.project-list a:hover {
+  color: #6a0dad;
 }
