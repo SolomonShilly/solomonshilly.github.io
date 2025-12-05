@@ -81,12 +81,12 @@ a:hover {
   font-size: 1.1rem;
   font-weight: 600;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .ticker {
-  display: flex;
-  gap: 100px;            /* spacing between services */
-  min-width: max-content; /* prevents wrapping */
+  display: inline-flex; /* inline-flex prevents wrapping */
+  gap: 100px;
   animation: scrollTicker 20s linear infinite;
 }
 
@@ -97,7 +97,7 @@ a:hover {
 /* continuous scroll animation */
 @keyframes scrollTicker {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-50%); } /* scroll half the duplicated content */
 }
 
 @keyframes fadeInUp {
