@@ -1,4 +1,4 @@
-
+/* GENERAL STYLES */
 body {
   margin: 0;
   overflow-x: hidden;
@@ -17,6 +17,7 @@ a:hover {
   color: #6a0dad;
 }
 
+/* HERO SECTION */
 .hero {
   width: 100%;
   height: 100vh;
@@ -36,6 +37,7 @@ a:hover {
   font-size: 18px;
 }
 
+/* GLASS EFFECT */
 .glass {
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
@@ -43,6 +45,7 @@ a:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* HERO CONTENT */
 .hero-content {
   padding: 40px 70px;
   text-align: center;
@@ -76,20 +79,22 @@ a:hover {
   bottom: 40px;
   width: 90%;
   font-size: 1.1rem;
-  padding: 14px 0;
   font-weight: 600;
   overflow: hidden;
-  white-space: nowrap;
 }
 
-.scroll-bar p {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scrollText 20s linear infinite;
+.ticker {
+  display: flex;
+  gap: 100px; /* spacing between services */
+  animation: scrollTicker 20s linear infinite;
 }
 
-@keyframes scrollText {
-  0% { transform: translateX(0); }
+.ticker span {
+  flex-shrink: 0;
+}
+
+@keyframes scrollTicker {
+  0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
 
@@ -100,6 +105,7 @@ a:hover {
   }
 }
 
+/* EXPERIENCE / EDUCATION INTERACTIVITY */
 .container {
   max-width: 900px;
   margin: 60px auto;
