@@ -7,14 +7,21 @@
 </head>
 <body>
 
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html">Home</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
 <div class="container">
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="education.html">Education</a>
-    <a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
   <h1>Solomon Shilly</h1>
   <h2>Experience</h2>
@@ -90,6 +97,22 @@
   toggles.forEach(t => {
     t.addEventListener('click', () => {
       t.classList.toggle('active');
+    });
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+  });
+
+  const navLinks = navbar.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navbar.classList.remove('active');
     });
   });
 </script>

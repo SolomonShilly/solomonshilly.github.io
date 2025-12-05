@@ -1,4 +1,12 @@
 /* GENERAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -166,4 +174,239 @@ h3.toggle:hover {
 
 @keyframes fadeInUp {
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #0a0f24;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* RESPONSIVE STYLES */
+
+/* Tablet and below (991px) */
+@media (max-width: 991px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content {
+    padding: 50px 60px;
+  }
+
+  .container {
+    margin: 40px 20px;
+    padding: 30px;
+  }
+
+  .scroll-bar {
+    width: 90%;
+  }
+}
+
+/* Tablet portrait (768px) */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 30px 30px;
+    margin-bottom: 0;
+    transition: right 0.3s ease;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 0;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+  }
+
+  .hero {
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content {
+    padding: 40px 50px;
+    max-width: 90%;
+  }
+
+  .email {
+    font-size: 1rem;
+  }
+
+  .scroll-bar {
+    width: 92%;
+    bottom: 30px;
+  }
+
+  .ticker {
+    gap: 60px;
+  }
+
+  .container {
+    margin: 20px 15px;
+    padding: 25px;
+  }
+
+  h3.toggle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile landscape (576px) */
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 30px 35px;
+    max-width: 95%;
+  }
+
+  .email {
+    font-size: 0.9rem;
+  }
+
+  .scroll-bar {
+    width: 95%;
+    bottom: 20px;
+    padding: 8px 0;
+  }
+
+  .ticker {
+    gap: 40px;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    margin: 15px 10px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3.toggle {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .details {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  .navbar {
+    width: 200px;
+    padding: 70px 20px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile portrait (320px - 479px) */
+@media (max-width: 479px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 0.9rem;
+  }
+
+  .hero-content {
+    padding: 25px 30px;
+  }
+
+  .email {
+    font-size: 0.85rem;
+  }
+
+  .scroll-bar {
+    bottom: 15px;
+  }
+
+  .ticker span {
+    font-size: 0.85rem;
+  }
+
+  .container {
+    margin: 10px 8px;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3.toggle {
+    font-size: 0.95rem;
+  }
 }
