@@ -1,8 +1,20 @@
+
 body {
   margin: 0;
-  overflow: auto;
+  overflow-x: hidden;
   font-family: Inter, Poppins, sans-serif;
   background: linear-gradient(90deg, #ffffff 0%, #d9eefe 40%, #c8c5ff 60%, #ffffff 100%);
+}
+
+a {
+  text-decoration: none;
+  color: #0a0f24;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #6a0dad;
 }
 
 .hero {
@@ -13,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .navbar {
@@ -23,18 +36,6 @@ body {
   font-size: 18px;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #0a0f24;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #6a0dad;
-}
-
-/* GLASS CONTAINERS */
 .glass {
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
@@ -42,10 +43,12 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* HERO CONTENT */
 .hero-content {
   padding: 40px 70px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
 }
 
 .hero-content h1 {
@@ -67,14 +70,60 @@ body {
   color: #222;
 }
 
+/* SCROLLING TICKER */
 .scroll-bar {
   position: absolute;
   bottom: 40px;
   width: 90%;
-  text-align: center;
   font-size: 1.1rem;
   padding: 14px 0;
   font-weight: 600;
   overflow: hidden;
   white-space: nowrap;
 }
+
+.scroll-bar p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+h3 {
+  cursor: pointer;
+  color: #0a0f24;
+  margin-top: 25px;
+  transition: 0.2s;
+}
+
+h3:hover {
+  color: #6a0dad;
+}
+
+.details {
+  display: none;
+  margin-left: 20px;
+  color: #333;
+}
+
+.active + .details {
+  display: block;
+}
+
