@@ -134,3 +134,33 @@ h3:hover {
 .active + .details {
   display: block;
 }
+
+.project-list h3 {
+  cursor: pointer;
+  margin-top: 25px;
+  color: #0a0f24;
+  transition: 0.2s;
+}
+
+.project-list h3:hover {
+  color: #6a0dad;
+}
+
+.project-list .details {
+  display: none;
+  margin-left: 20px;
+  color: #333;
+}
+
+.project-list .active + .details {
+  display: block;
+}
+
+.project-list a {
+  color: #0a0f24;
+  font-weight: 500;
+}
+
+.project-list a:hover {
+  color: #6a0dad;
+}
