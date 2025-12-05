@@ -1,36 +1,85 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
-  color: #222;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
+<style>
+overflow: hidden;
 }
 
-.container{
-  text-align: center;
-  background-color: white;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+.hero {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
-h1{
-  margin-top: 0;
-  font-size: 2em;
-  color: #0a0f24;
+
+.navbar {
+position: absolute;
+top: 40px;
+display: flex;
+gap: 24px;
+font-size: 18px;
 }
 
-h2{
-  color: #333;
-  margin: 0 0 10px 0;
-  font-weight: normal;
+
+.navbar a {
+text-decoration: none;
+color: #0a0f24;
+font-weight: 500;
+transition: 0.3s;
 }
 
-p{
-  margin: 0;
-  font-size: 1.1em;
+
+.navbar a:hover {
+color: #6a0dad;
 }
+
+
+.glass {
+background: rgba(255, 255, 255, 0.55);
+backdrop-filter: blur(12px);
+border-radius: 16px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+
+.hero-content {
+padding: 40px 70px;
+text-align: center;
+}
+
+
+.hero-content h1 {
+font-size: 3rem;
+margin-bottom: 10px;
+color: #0a0f24;
+}
+
+
+.hero-content h2 {
+font-size: 1.3rem;
+font-weight: 400;
+color: #444;
+margin-bottom: 10px;
+}
+
+
+.email {
+font-size: 1.1rem;
+margin-top: 10px;
+color: #222;
+}
+
+
+.scroll-bar {
+position: absolute;
+bottom: 40px;
+width: 90%;
+text-align: center;
+font-size: 1.1rem;
+padding: 14px 0;
+font-weight: 600;
+overflow: hidden;
+white-space: nowrap;
+}
+</style>
