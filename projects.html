@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container glass" style="margin-top: 60px; padding: 40px; border-radius: 20px;">
+  
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="education.html">Education</a> |
+    <a href="experience.html">Experience</a> |
+    <a href="projects.html">Projects</a>
+  </p>
+
+  <h1>Solomon Shilly</h1>
+  <h2>Projects</h2>
+
+  <div class="project-list">
+
+    <!-- NASA LIGHTS -->
+    <h3 class="toggle">NASA Nighttime Lights Analysis</h3>
+    <div class="details">
+      <ul>
+        <li>Modeled U.S. economic activity using VIIRS satellite radiance data (2012–2020).</li>
+        <li><a href="https://github.com/SolomonShilly/NasaLightsSummary" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <!-- SNOWFLAKE -->
+    <h3 class="toggle">Snowflake Automated Data Pipeline</h3>
+    <div class="details">
+      <ul>
+        <li>Python workflow that creates schemas, stages, and uploads multi-format datasets into Snowflake.</li>
+        <li><a href="https://github.com/SolomonShilly/SnowflakePipeline" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <!-- TARIFF RATES -->
+    <h3 class="toggle">Tariff & Government Debt Analysis</h3>
+    <div class="details">
+      <ul>
+        <li>Built visualizations comparing U.S. tariff cycles to national debt trends (1901–2025).</li>
+        <li><a href="https://github.com/SolomonShilly/TariffRates" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <!-- FRAUD DETECTION -->
+    <h3 class="toggle">Fraud Detection ML Models</h3>
+    <div class="details">
+      <ul>
+        <li>Developed logistic regression + neural network frameworks for credit card fraud classification.</li>
+        <li><a href="https://github.com/SolomonShilly/FraudDetection" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <!-- ECON 560 -->
+    <h3 class="toggle">Time-Series Econometrics — ECON 560</h3>
+    <div class="details">
+      <ul>
+        <li>Built AR, ARDL, GARCH, and VAR models showing China’s impact on India’s stock market.</li>
+        <li><a href="https://drive.google.com/file/d/1wXmT2HpqubsSVPN0dhLG6ZKcfFTwDwuk/view?usp=sharing" target="_blank">View Presentation</a></li>
+      </ul>
+    </div>
+
+    <!-- STATA FINAL -->
+    <h3 class="toggle">Econometrics Research — Stata Final</h3>
+    <div class="details">
+      <ul>
+        <li>Modeled linear and logistic regressions showing education expectations raise student performance 30–40%.</li>
+        <li><a href="https://drive.google.com/file/d/1iOWMJ25hA4jq3pp65u5lxJWgL38UtF3v/view?usp=sharing" target="_blank">View Presentation</a></li>
+      </ul>
+    </div>
+
+    <!-- E-COMMERCE -->
+    <h3 class="toggle">Custom Merch Shop</h3>
+    <div class="details">
+      <ul>
+        <li>Built and marketed a small e-commerce brand using social-media.</li>
+        <li><a href="https://www.instagram.com/custommerchshop/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const toggles = document.querySelectorAll('.toggle');
+  toggles.forEach(t => {
+    t.addEventListener('click', () => {
+      t.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
