@@ -18,24 +18,32 @@ a:hover {
   color: #6a0dad;
 }
 
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
 /* CONTAINERS */
 .container {
   max-width: 900px;
   margin: 60px auto;
-  padding: 40px 30px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* NAVIGATION */
-.navbar, .container p {
+.navbar {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 20px;
   font-size: 16px;
+}
+
+.navbar a {
+  font-weight: 500;
 }
 
 /* HERO SECTION */
@@ -55,6 +63,9 @@ a:hover {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
+  width: 90%;
+  max-width: 700px;
+  margin-bottom: 40px;
 }
 
 .hero-content h1 {
@@ -74,12 +85,11 @@ a:hover {
 
 /* SCROLLING TICKER */
 .scroll-bar {
-  position: absolute;
-  bottom: 40px;
   width: 90%;
   font-size: 1.1rem;
   font-weight: 600;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .ticker {
