@@ -97,7 +97,7 @@ a:hover {
 /* continuous scroll animation */
 @keyframes scrollTicker {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* scroll half the width (due to duplication) */
+  100% { transform: translateX(-100%); }
 }
 
 @keyframes fadeInUp {
